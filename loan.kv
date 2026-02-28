@@ -1,5 +1,5 @@
-LoanApplicationScreen
 
+HomeScreen
 <HomeScreen>:
     BoxLayout:
         orientation: "vertical"
@@ -28,6 +28,10 @@ LoanApplicationScreen
                 text: "LogIn"
                 bold: True
                 font_size: 30
+                on_release:
+                    root.manager.current = 'login'
+                    root.manager.transition.direction = 'left'
+                    
 
             Button:
                 text: "Ask for Help"
@@ -61,62 +65,7 @@ LoanApplicationScreen
 
 
 
-<LoanApplicationScreen>:
-    BoxLayout:
-        orientation: "vertical"
-        spacing: 20
 
-
-        Label:
-            text: 'HOME PAGE'
-            font_size: 50
-            size_hint_y: .25
-
-        
-        GridLayout:
-            size_hint: .4,.6
-            cols: 1
-            spacing: 20
-            pos_hint: {'center_x':.5}
-
-            Button:
-                text: "Check Balance"
-                bold: True
-                font_size: 30
-            
-
-            Button:
-                text: "Apply for Loan"
-                bold: True
-                font_size: 30
-
-            Button:
-                text: "Check Loan Status"
-                bold: True
-                font_size: 30
-
-            Button:
-                text: "History"
-                bold: True
-                font_size: 30
-            
-            
-            
-            Button:
-                text: "FAQs"
-                bold: True
-                font_size: 30
-            
-            
-
-        
-        Label:
-            text: 'NOTE: This program is a learning project kindly be informed any information collected shall be kept private'
-            text_size: self.size 
-            halign: 'center'
-            font_size: 25
-            italic: True
-            size_hint_y: .15
 
 
 

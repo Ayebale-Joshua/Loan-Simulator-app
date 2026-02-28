@@ -1,0 +1,60 @@
+Today is the 28th - Feb - 2026
+
+I have decided to add alot on to my project. This includes managing the logic into one file and the graphic 
+user interface in another file
+    Logic - Loan_logic.py
+    GUI - loan.kv
+
+------------- Logic -----------------------
+I am using the Kivy module in python
+Imported the Screen, ScreenManager to implement screen switching
+I also created classes for the screens
+
+
+
+----------GUI----------------------------
+I am going to be using 
+    -   'root.manager.current'  ---->   property to trigger the switching
+    -   'root.manager.transition.direction'     ----->  to manager the transition
+
+I will use ------> #:import <----- to import the properties in my kv file forexample the transition type
+
+forexample:
+
+    inside my kv file
+
+    sample.kv
+
+        :import FadeTransition kivy.uix.screenmager.FadeTransition
+
+        WindowManager:
+            transition: FadeTransition
+            MainScreen:
+            SecondScreen:
+
+    
+    However I find using the logic to change screen much easier
+
+    forexample
+
+    inside my python file
+
+    sample.py
+
+    .
+    .
+    .
+    from kivy.uix.screenmager import FadeTransition
+
+    class MainScreen(Screen):
+        def change_screen(self):
+            self.manager.transition = FadeTransition
+            self.manager.current = 'SecondScreen'
+    
+    inside the kv file
+
+    MainScreen:
+        Button: 
+            text: 'Test Screen'
+            on_release: root.change_screen
+

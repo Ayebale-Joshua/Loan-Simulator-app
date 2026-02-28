@@ -1,0 +1,139 @@
+RequirementScreen2
+<RequirementScreen2>:
+    BoxLayout:
+        orientation: 'vertical'
+        
+        Label:
+            text: 'Loan Application Form'
+            size_hint: 1,.15
+            font_size: 40
+        
+        Label:
+            text: '3.   Loan Requirement'
+            font_size: 30
+            size_hint: 1,.1
+            bold: True
+            underline: True
+
+        
+        GridLayout:
+            cols: 2
+            spacing: 20
+            size_hint: .8,.3
+            pos_hint: {'center_x': .5,'center_y':.5}
+            padding: 20
+
+            Label: 
+                text: 'Loan Amount'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Purpose of Loan'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False       
+
+            Label: 
+                text: 'Repayment Purpose'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            
+    
+
+
+
+
+        Label:
+            text: '4. Guarentee Details'
+            font_size: 30
+            size_hint: 1,.1
+            bold: True
+            underline: True
+
+        
+        GridLayout:
+            cols: 2
+            spacing: 20
+            size_hint: .8,.3
+            pos_hint: {'center_x': .5,'center_y':.5}
+            padding: 20
+
+            Label: 
+                text: 'First Name'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Last Name'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False       
+
+            Label: 
+                text: 'Address'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Contact'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+            
+
+
+
+            
+
+        BoxLayout:
+            size_hint: .5,.1
+            pos_hint: {'center_x': .5,'center_y': .5}
+            spacing: 10
+            padding: 20
+            
+
+            Button:
+                text: 'Back'
+                font_size: 25
+                on_release:
+                    root.manager.current = 'apply'
+                    root.manager.transition.direction = 'right'
+
+
+            Button:
+                text: 'Next'
+                font_size: 25

@@ -10,7 +10,30 @@ Config.set("graphics","height","900")
 #   Main App
 
 from kivy.app import App
-from kivy.uix.screenmanager import Screen, ScreenManager
+from kivy.uix.screenmanager import Screen, ScreenManager, FadeTransition
+from kivy.lang.builder import Builder
+
+class MyManager(ScreenManager):
+    def __init__(self, **kwargs):
+        Builder.load_file("login.kv")
+        Builder.load_file("requirement.kv")
+        Builder.load_file("requirement2.kv")
+
+        super().__init__(**kwargs)
+        self.add_widget(HomeScreen(name = 'home'))
+        self.add_widget(LoanApplicationScreen(name='login'))
+        self.add_widget(RequirementScreen(name='apply'))
+        self.add_widget(RequirementScreen2(name='apply2'))
+
+
+class RequirementScreen(Screen):
+    pass
+
+
+class RequirementScreen2(Screen):
+    pass
+
+
 
 
 class HomeScreen(Screen):
@@ -24,10 +47,7 @@ class LoanApplicationScreen(Screen):
 
 class LoanApp(App):
     def build(self):
-        sm = ScreenManager()
-        #sm.add_widget(HomeScreen(name="home"))
-        sm.add_widget(LoanApplicationScreen(name="application"))
-        return sm
+        return MyManager()
     
 
 

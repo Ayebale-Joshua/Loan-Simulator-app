@@ -1,5 +1,5 @@
-LoanApplicationScreen
 
+LoanApplicationScreen:
 <LoanApplicationScreen>:
     BoxLayout:
         orientation: "vertical"
@@ -28,6 +28,9 @@ LoanApplicationScreen
                 text: "Apply for Loan"
                 bold: True
                 font_size: 30
+                on_release:
+                    root.manager.current = 'apply'
+                    root.manager.transition.direction = 'left'
 
             Button:
                 text: "Check Loan Status"
@@ -45,6 +48,9 @@ LoanApplicationScreen
                 text: "BACK"
                 bold: True
                 font_size: 30
+                on_release:
+                    root.manager.current = 'home'
+                    root.manager.transition.direction = 'right'
             
             
 

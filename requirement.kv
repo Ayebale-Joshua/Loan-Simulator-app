@@ -1,0 +1,150 @@
+RequirementScreen
+<RequirementScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        
+        Label:
+            text: 'Loan Application Form'
+            size_hint: 1,.15
+            font_size: 40
+        
+        Label:
+            text: '1. Personal Information'
+            font_size: 30
+            size_hint: 1,.1
+            bold: True
+            underline: True
+
+        
+        GridLayout:
+            cols: 2
+            spacing: 20
+            size_hint: .8,.3
+            pos_hint: {'center_x': .5,'center_y':.5}
+            padding: 20
+
+            Label: 
+                text: 'Names'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Date of Birth'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False       
+
+            Label: 
+                text: 'NIN'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Contact'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+    
+
+
+
+
+        Label:
+            text: '2. Financial Profile'
+            font_size: 30
+            size_hint: 1,.1
+            bold: True
+            underline: True
+
+        
+        GridLayout:
+            cols: 2
+            spacing: 20
+            size_hint: .8,.3
+            pos_hint: {'center_x': .5,'center_y':.5}
+            padding: 20
+
+            Label: 
+                text: 'Gross Monthly Income'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Employment Status'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False       
+
+            Label: 
+                text: 'Monthly Expenses'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+
+            Label: 
+                text: 'Assets and Liabilities'
+                font_size: 28
+                text_size: self.size
+                halign: 'center'
+
+            TextInput:
+                font_size: 28
+                multiline: False
+            
+
+
+
+            
+
+        BoxLayout:
+            size_hint: .5,.1
+            pos_hint: {'center_x': .5,'center_y': .5}
+            spacing: 10
+            padding: 20
+            
+
+            Button:
+                text: 'Back'
+                font_size: 25
+                on_release:
+                    root.manager.current = 'login'
+                    root.manager.transition.direction = 'right'
+
+
+            Button:
+                text: 'Next'
+                font_size: 25
+                on_release:
+                    root.manager.current = 'apply2'
+                    root.manager.transition.direction = 'left'
