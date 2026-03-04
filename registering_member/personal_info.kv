@@ -1,0 +1,136 @@
+PersonalInfo
+<PersonalInfo>:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        
+
+        Label:
+            text: 'Registering as New Member'
+            size_hint: 1,.15
+            font_size: 35
+
+
+        Label: 
+            text: 'Step 1 of 4 Personal Information'
+            font_size: 30
+            size_hint: 1,.1
+        
+
+        GridLayout:
+            cols: 2
+            size_hint:.85,.7
+            pos_hint: {'center_x':.5}
+            spacing: 20
+
+
+            Label: 
+                text: 'Member ID'
+                font_size: 25
+
+
+            TextInput:
+                font_size: 25
+                text_size: self.size
+                halighn: 'center'
+                multiline: False
+                disabled: True
+
+
+
+            Label: 
+                text: 'First Name'
+                font_size: 25
+
+
+            TextInput:
+                font_size: 25
+                text_size: self.size
+                halighn: 'center'
+                multiline: False
+
+
+            Label: 
+                text: 'Last Name'
+                font_size: 25
+
+
+            TextInput:
+                font_size: 25
+                text_size: self.size
+                halighn: 'center'
+                multiline: False
+                
+
+
+            Label: 
+                text: 'Other Name'
+                italic: True
+                font_size: 25
+
+
+            TextInput:
+                font_size: 25
+                text: 'optional'
+                text_size: self.size
+                halighn: 'center'
+                multiline: False
+
+
+
+            Label: 
+                text: 'Date of Birth'
+                font_size: 25
+
+
+            TextInput:
+                font_size: 25
+                text_size: self.size
+                halighn: 'center'
+                multiline: False
+
+            Label: 
+                text: 'Marital status'
+                font_size: 25
+
+
+            TextInput:
+                font_size: 25
+                text_size: self.size
+                halighn: 'center'
+                multiline: False
+            
+
+        BoxLayout:
+            padding:10
+            spacing: 40
+            size_hint: .6,.1
+            pos_hint: {'center_y':.5,'center_x': .5}
+
+
+            Button:
+                text: 'Cancel'
+                font_size: 25
+                bold: True
+                on_release:
+                    root.manager.current = 'home'
+                    root.manager.transition.direction = 'right'           
+
+
+
+            Button: 
+                text: 'Next'
+                font_size: 25
+                bold: True
+                on_release:
+                    root.manager.current = 'contactinfo'
+                    root.manager.transition.direction = 'up'           
+
+
+
+            
+
+
+
+
+

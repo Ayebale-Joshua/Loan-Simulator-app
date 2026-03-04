@@ -22,6 +22,7 @@ LoanApplicationScreen:
                 text: "Check Balance"
                 bold: True
                 font_size: 30
+                on_release: root.checkBalance(self)
             
 
             Button:
@@ -36,6 +37,7 @@ LoanApplicationScreen:
                 text: "Check Loan Status"
                 bold: True
                 font_size: 30
+                on_release:root.checkLoanStatus(self)
 
             Button:
                 text: "History"
@@ -45,7 +47,8 @@ LoanApplicationScreen:
             
             
             Button:
-                text: "BACK"
+                text: "LogOut"
+                color: .9,.5,.5,1
                 bold: True
                 font_size: 30
                 on_release:

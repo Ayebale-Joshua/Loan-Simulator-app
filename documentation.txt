@@ -58,3 +58,9 @@ forexample:
             text: 'Test Screen'
             on_release: root.change_screen
 
+Today ----- 2 -March - 2026
+
+    I have Included PopUp menus for some functions to increase functionality
+
+    I am trying to put a scroll view into my system but it's showing alot of errors, I have decided to leave it and then try it out once
+    i get to know about Scroll View in details

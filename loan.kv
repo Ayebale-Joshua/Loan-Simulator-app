@@ -22,6 +22,9 @@ HomeScreen
                 text: "Register"
                 bold: True
                 font_size: 30
+                on_release:
+                    root.manager.current = 'personalinfo'
+                    root.manager.transition.direction = 'up'
             
 
             Button:
@@ -37,11 +40,13 @@ HomeScreen
                 text: "Ask for Help"
                 bold: True
                 font_size: 30
+                on_release: root.contact_us(self)
 
             Button:
                 text: "About US"
                 bold: True
                 font_size: 30
+                on_release: root.about_us(self)
             
             
             
@@ -49,6 +54,7 @@ HomeScreen
                 text: "FAQs"
                 bold: True
                 font_size: 30
+                on_release: root.faq(self)
             
             
 
